@@ -1,0 +1,172 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix stats: <http://stats.270a.info/vocab#> .
+
+<http://stats.270.info/vocab>
+    a owl:Ontology;
+    owl:versionInfo "0.01";
+    rdfs:label "A stats vocabulary"@en ;
+    rdfs:comment "Status: TESTING! Coverage: Whatever shows up at stats.270a.info. Caution: Might switch to http://semanticscience.org/ontology/sio.owl - which is much richer, however, more complex for queries."@en ;
+    dcterms:created "2013-07-18"^^xsd:date ;
+    dcterms:modified "2013-07-18"^^xsd:date ;
+    dcterms:title "A stats vocabulary"@en ;
+    dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:contributor <http://csarven.ca/#i> ;
+    .
+
+
+stats:Analysis
+    a rdfs:Class , owl:Class ;
+    rdfs:label "Analysis"@en ;
+    rdfs:comment "A statatistical data analysis"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+stats:DataRow
+    a rdfs:Class, owl:Class ;
+    rdfs:label "Data row"@en ;
+    rdfs:comment "XXX: Might rename .."@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+stats:Summary
+    a rdfs:Class, owl:Class ;
+    rdfs:label "Summary"@en ;
+    rdfs:comment "XXX: Might rename .."@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+
+
+stats:graph
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "graph"@en ;
+    rdfs:comment "A graph, figure, or chart"@en;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+stats:independentVariable
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "independent variable"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+stats:dependentVariable
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "dependent variable"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+stats:refPeriod
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "reference period"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+
+stats:n
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "Sample size"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:pValue
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "p-value"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:correlation
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "correlation"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:correlationMethod
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "correlation method"@en ;
+    rdfs:comment "Correlation method that's used e.g., Pearson, Kendall, Spearman"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:adjustedRSquared
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "adjusted R-squared"@en ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Coefficient_of_determination#Adjusted_R2> ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:maxAdjustedRSquared
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "max adjusted R-squared"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:bestModel
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "best linear model"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+
+stats:data
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "has data row"@en ;
+    rdfs:comment "XXX: Might rename .."@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:summary
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "has summary"@en ;
+    rdfs:comment "XXX: Might rename .."@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+
+
+stats:refArea
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "reference area"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:identityX
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "identity concept from independent variable"@en ;
+    rdfs:comment "XXX: Highly unstable - Testing"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:identityY
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:label "identity concept from dependent variable"@en ;
+    rdfs:comment "XXX: Highly unstable - Testing"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+
+stats:measureX
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "measure value of independent variable"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:measureY
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "measure value of dependent variable"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+
+stats:linearModel
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "linear model"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:yIntercept
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "y-intercept"@en ;
+    rdfs:comment "XXX: Highly unstable - Testing"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
+stats:slope
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:label "slope"@en ;
+    rdfs:comment "XXX: Highly unstable - Testing"@en ;
+    rdfs:isDefinedBy <http://stats.270.info/vocab>
+    .
