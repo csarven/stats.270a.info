@@ -5,7 +5,7 @@
 #print_r($_GET);
 #print_r(sha1($_GET['datasetX'].$_GET['datasetY'].$_GET['refPeriod']));
 
-$file = "/var/shiny-server/www/lsd-analysis/plots/".sha1($_GET['datasetX'].$_GET['datasetY'].$_GET['refPeriod']).".svg";
+$file = "/var/shiny-server/www/lsd-analysis/www/plots/".sha1($_GET['datasetX'].$_GET['datasetY'].$_GET['refPeriod']).".svg";
 
 if (file_exists($file)) {
     $fp = fopen($file, 'rb');
