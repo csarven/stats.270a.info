@@ -4,3 +4,4 @@ java tdb.tdbloader --desc=/usr/lib/fuseki/tdb.stats.ttl --graph=http://stats.270
 java tdb.tdbloader --desc=/usr/lib/fuseki/tdb.stats.ttl --graph=http://stats.270a.info/graph/meta ~/Graphs/dcterms.nt
 java tdb.tdbloader --desc=/usr/lib/fuseki/tdb.stats.ttl --graph=http://stats.270a.info/graph/meta ~/Graphs/rdfs.nt
 java tdb.tdbloader --desc=/usr/lib/fuseki/tdb.stats.ttl --graph=http://stats.270a.info/graph/meta ~/Graphs/rdf.nt
+java tdb.tdbloader --desc=/usr/lib/fuseki/tdb.stats.ttl --graph=http://stats.270a.info/graph/meta ~/Graphs/extra.nt
