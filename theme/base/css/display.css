@@ -342,6 +342,8 @@ margin-bottom:0.5em;
 
 .entry-content {
 margin-bottom:3em;
+float:left;
+width:100%;
 }
 
 
@@ -501,6 +503,7 @@ margin-bottom:2.5em;
 clear:both;
 float:left;
 margin-left:33.5%;
+width:65.5%;
 }
 
 #submit {
@@ -512,6 +515,7 @@ margin-top:18px;
 
 #lsd-analysis-results {
 margin-bottom:18px;
+width:100%;
 }
 #lsd-analysis-results caption {
 display:none;
@@ -519,7 +523,7 @@ display:none;
 
 #content #download-csv {
 float:right;
-margin-right:3.75em;
+margin-right:1.25em;
 margin-bottom:0;
 padding-left:21px;
 background:url(../../default/images/icons/icon_diskette.gif) no-repeat 0 50%;
