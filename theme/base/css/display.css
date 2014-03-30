@@ -538,6 +538,41 @@ background-color:#E5E5E5 !important;
 opacity:1 !important;
 }
 
+
+
+/*Bootstrap stuff*/
+.tab-content > .tab-pane {
+display:none;
+}
+.tab-content > .active {
+display:block;
+}
+.nav-tabs {
+float:left;
+width:100%;
+margin-bottom:2em;
+}
+
+.nav-tabs li {
+float:left;
+list-style-type:none;
+}
+.nav-tabs li a {
+border-bottom:1px solid #E5E5E5;
+padding:0.5em 1em;
+display:block;
+text-decoration:none;
+}
+.nav-tabs > .active > a {
+border:1px solid #E5E5E5;
+border-bottom:0;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+background-color:#F0F0F0;
+}
+
+
+
 } /*end of screen, projection, tv*/
 
 
