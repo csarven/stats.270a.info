@@ -547,7 +547,8 @@ display:none;
 .tab-content > .active {
 display:block;
 }
-.nav-tabs {
+
+#content .nav-tabs {
 float:left;
 width:100%;
 margin-bottom:2em;
